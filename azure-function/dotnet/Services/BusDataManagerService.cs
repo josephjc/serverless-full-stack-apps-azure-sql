@@ -54,7 +54,7 @@ public sealed class BusDataManagerService : IBusDataManagerService
         response.EnsureSuccessStatusCode();
         var responseJson = await response.Content.ReadAsStringAsync();
         var feed = JsonConvert.DeserializeObject<Feed>(
-            responseJson, DefaultJsonSerializerSettings.Defaults);
+            responseJson, DefaultJsonSerializerSettings.Defaults);  
 
         return feed;
     }
